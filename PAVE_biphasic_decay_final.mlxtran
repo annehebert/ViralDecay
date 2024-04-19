@@ -1,7 +1,7 @@
 <DATA_FORMATTING>
 
 [FILEINFO]
-file='../pave_allgroups_test2.csv'
+file='pave_data_formatted.csv'
 header={Weeks, ART, ID, level, time, group, loglevel, censor, RhmAbs, N803}
 
 [CONTENT]
@@ -23,7 +23,7 @@ censoringTags={'1.77085'}
 <DATAFILE>
 
 [FILEINFO]
-file='../pave_allgroups_test2.csv'
+file='pave_data_formatted.csv'
 delimiter = comma
 header={Weeks, ART, ID, level, time, group, loglevel, censor, RhmAbs, N803, CENS}
 

@@ -1,6 +1,6 @@
 ********************************************************************************
 *                      PAVE_biphasic_decay_final.mlxtran                       *
-*                      April 19, 2024 at 16:31:16                              *
+*                      April 19, 2024 at 16:56:53                              *
 *                      Monolix version : 2023R1                                *
 ********************************************************************************
 
@@ -24,8 +24,8 @@ omega_b1         :                    0.06    0.0442      73.7
 Error Model Parameters -------------------
 a_               :                   0.643    0.0551      8.57
 
-Elapsed time (seconds):       46
-CPU time     (seconds):       36
+Elapsed time (seconds):       31
+CPU time     (seconds):       35
 Exploratory phase iterations:      249 (Autostop)
 Smoothing phase iterations:        185 (Autostop)
 
@@ -43,8 +43,8 @@ a  :     -5.64     -4.71     -4.51     -4.35     -2.73
 b1 :     0.576     0.638     0.728      1.39      1.41
 b2 :     0.033    0.0402    0.0616    0.0616    0.0616
 
-Elapsed time (seconds):      1.8
-CPU time     (seconds):      1.8
+Elapsed time (seconds):      2.6
+CPU time     (seconds):      1.9
 Iterations:       81 (Autostop)
 
  -------------------------------------------------------------------------------
@@ -57,7 +57,7 @@ a  :     -5.54     -4.67     -4.48     -4.34     -2.77
 b1 :     0.575     0.634     0.731      1.39      1.41
 b2 :     0.033    0.0402    0.0616    0.0616    0.0616
 
-Elapsed time (seconds):    0.029
+Elapsed time (seconds):    0.094
 CPU time     (seconds):        0
 
  -------------------------------------------------------------------------------
@@ -87,8 +87,8 @@ beta_b1_RhmAbs_1  0.020221  0.012423  -0.49542  -0.63765         1
                                min       max   max/min
 Eigen values           :      0.11       2.2        20
 
-Elapsed time (seconds):        2
-CPU time     (seconds):      2.1
+Elapsed time (seconds):      2.2
+CPU time     (seconds):      1.7
 Iterations:       50 (Autostop)
 
  -------------------------------------------------------------------------------
@@ -105,7 +105,7 @@ Akaike Information Criteria               (AIC) :         364.43
 Corrected Bayesian Information Criteria  (BICc) :         394.04
 Bayesian Information Criteria             (BIC) :         374.82
 
-Elapsed time                          (seconds) :           6.00
+Elapsed time                          (seconds) :           9.77
 CPU time                              (seconds) :           6.00
 MonteCarlo size (is):    10000 (Fixed number of iterations)
 
