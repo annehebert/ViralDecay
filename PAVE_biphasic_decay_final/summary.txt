@@ -1,0 +1,122 @@
+********************************************************************************
+*                      PAVE_biphasic_decay_final.mlxtran                       *
+*                      April 19, 2024 at 16:31:16                              *
+*                      Monolix version : 2023R1                                *
+********************************************************************************
+
+
+ESTIMATION OF THE POPULATION PARAMETERS ________________________________________
+
+Fixed Effects ----------------------------     se_sa    rse(%)
+x0_pop           :                    6.92     0.226      3.27
+a_pop            :                   -4.46     0.276      6.19
+b1_pop           :                    0.72    0.0632      8.77
+beta_b1_N803_1   :                  -0.796     0.123      15.4
+beta_b1_RhmAbs_1 :                    0.67     0.117      17.4
+b2_pop           :                  0.0616   0.00767      12.5
+beta_b2_N803_1   :                 -0.0285   0.00842      29.5
+
+Standard Deviation of the Random Effects -
+omega_x0         :                   0.823     0.164      19.9
+omega_a          :                   0.768      0.22      28.6
+omega_b1         :                    0.06    0.0442      73.7
+
+Error Model Parameters -------------------
+a_               :                   0.643    0.0551      8.57
+
+Elapsed time (seconds):       46
+CPU time     (seconds):       36
+Exploratory phase iterations:      249 (Autostop)
+Smoothing phase iterations:        185 (Autostop)
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE INDIVIDUAL PARAMETERS ________________________________________
+
+
+Estimation of the individual parameters by Conditional Distribution ------------
+           min        Q1    median        Q3       max
+x0 :      4.76      6.66      7.09      7.45      7.65
+a  :     -5.64     -4.71     -4.51     -4.35     -2.73
+b1 :     0.576     0.638     0.728      1.39      1.41
+b2 :     0.033    0.0402    0.0616    0.0616    0.0616
+
+Elapsed time (seconds):      1.8
+CPU time     (seconds):      1.8
+Iterations:       81 (Autostop)
+
+ -------------------------------------------------------------------------------
+
+
+Estimation of the individual parameters by Conditional Mode --------------------
+           min        Q1    median        Q3       max
+x0 :      4.78      6.65       7.1      7.46      7.68
+a  :     -5.54     -4.67     -4.48     -4.34     -2.77
+b1 :     0.575     0.634     0.731      1.39      1.41
+b2 :     0.033    0.0402    0.0616    0.0616    0.0616
+
+Elapsed time (seconds):    0.029
+CPU time     (seconds):        0
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE FISHER INFORMATION MATRIX ____________________________________
+
+
+Estimation of the Fisher information matrix by Stochastic Approximation --------
+
+Correlation Matrix :
+          x0_pop         1
+           a_pop  -0.28828         1
+          b1_pop   0.25561  -0.27619         1
+  beta_b1_N803_1  0.027359 -0.036766-0.0038209         1
+beta_b1_RhmAbs_1  0.020221  0.012423  -0.49542  -0.63765         1
+          b2_pop -0.044052   0.35289 -0.057534  -0.01167  0.020515         1
+  beta_b2_N803_1  0.027897  -0.21874  0.030323  0.021992 -0.017267  -0.84488         1
+        omega_x0  0.050453  -0.12439  0.065676  0.033009  0.025836 -0.018766 0.0020826         1
+         omega_a  0.037531  -0.16111   0.15576  0.090892 -0.073225   0.10258  -0.12532   0.23193         1
+        omega_b1  -0.15777   0.16845  0.040253  -0.21702  -0.18059 -0.030136  0.058024  -0.13265  -0.16293         1
+              a_  0.013454 -0.021577  0.018261 -0.036958  0.013989   0.22577 -0.077794 -0.096808 -0.0775270.00037033         1
+
+                               min       max   max/min
+Eigen values           :      0.11       2.2        20
+
+Elapsed time (seconds):        2
+CPU time     (seconds):      2.1
+Iterations:       50 (Autostop)
+
+ -------------------------------------------------------------------------------
+
+ _______________________________________________________________________________
+
+
+
+ESTIMATION OF THE LOG-LIKELIHOOD _______________________________________________
+
+                                                            (is)
+-2 x log-likelihood                       (OFV) :         342.43
+Akaike Information Criteria               (AIC) :         364.43
+Corrected Bayesian Information Criteria  (BICc) :         394.04
+Bayesian Information Criteria             (BIC) :         374.82
+
+Elapsed time                          (seconds) :           6.00
+CPU time                              (seconds) :           6.00
+MonteCarlo size (is):    10000 (Fixed number of iterations)
+
+
+[Importance Sampling] Standard error        : 0.056
+                      Sampling distribution : T-distribution with 5 degrees of freedom
+
+ _______________________________________________________________________________
+
+DATASET INFORMATION
+Number of individuals: 19
+Number of observations (loglevel): 468
+Number of doses: 0
+

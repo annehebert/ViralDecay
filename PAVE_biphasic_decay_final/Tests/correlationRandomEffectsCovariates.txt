@@ -1,0 +1,10 @@
+eta,covariate,statistics,p-value,test
+eta_x0,N803,1.03321,0.323656,Anova
+eta_x0,RhmAbs,0.0103887,0.920009,Anova
+eta_x0,group,0.695318,0.513377,Anova
+eta_a,N803,0.325732,0.57565,Anova
+eta_a,RhmAbs,1.32827,0.265062,Anova
+eta_a,group,1.49954,0.252988,Anova
+eta_b1,N803,0.160495,0.693691,Anova
+eta_b1,RhmAbs,0.00378021,0.951691,Anova
+eta_b1,group,0.0843349,0.919529,Anova

@@ -1,0 +1,107 @@
+<DATA_FORMATTING>
+
+[FILEINFO]
+file='../../../pave_allgroups_test2.csv'
+header={Weeks, ART, ID, level, time, group, loglevel, censor, RhmAbs, N803}
+
+[CONTENT]
+ID = {use=identifier}
+time = {use=time}
+
+[SETTINGS]
+LINES:
+header={0}
+excluded={}
+
+[OPERATIONS]
+OBSERVATIONS:
+type=id
+duplicateInfo=true
+censoringTags={'1.77085'}
+'loglevel'={{censoring=left, loq = {column='loglevel'}, tags={'1.77085'}}}
+
+<DATAFILE>
+
+[FILEINFO]
+file='../../../pave_allgroups_test2.csv'
+delimiter = comma
+header={Weeks, ART, ID, level, time, group, loglevel, censor, RhmAbs, N803, CENS}
+
+[CONTENT]
+ID = {use=identifier}
+time = {use=time}
+group = {use=covariate, type=categorical}
+loglevel = {use=observation, type=continuous}
+RhmAbs = {use=covariate, type=categorical}
+N803 = {use=covariate, type=categorical}
+CENS = {use=censored}
+
+[SETTINGS]
+dataType = {'loglevel'=plasma}
+
+<MODEL>
+
+[COVARIATE]
+input = {group, N803, RhmAbs}
+
+group = {type=categorical, categories={'1', '2', '3'}}
+N803 = {type=categorical, categories={'0', '1'}}
+RhmAbs = {type=categorical, categories={'0', '1'}}
+
+[INDIVIDUAL]
+input = {b1_pop, b2_pop, a_pop, x0_pop, omega_x0, omega_a, omega_b1, N803, beta_b2_N803_1, beta_b1_N803_1, RhmAbs, beta_b1_RhmAbs_1}
+
+N803 = {type=categorical, categories={'0', '1'}}
+RhmAbs = {type=categorical, categories={'0', '1'}}
+
+DEFINITION:
+b1 = {distribution=normal, typical=b1_pop, covariate={N803, RhmAbs}, coefficient={{0, beta_b1_N803_1}, {0, beta_b1_RhmAbs_1}}, sd=omega_b1}
+b2 = {distribution=normal, typical=b2_pop, covariate=N803, coefficient={0, beta_b2_N803_1}, no-variability}
+a = {distribution=normal, typical=a_pop, sd=omega_a}
+x0 = {distribution=normal, typical=x0_pop, sd=omega_x0}
+
+[LONGITUDINAL]
+input = {a_}
+
+file = '../../../exp_decay_model.txt'
+
+DEFINITION:
+loglevel = {distribution=normal, prediction=x, errorModel=constant(a_)}
+
+<FIT>
+data = 'loglevel'
+model = loglevel
+
+<PARAMETER>
+a_ = {value=0.6466389, method=MLE}
+a_pop = {value=-3.752, method=MLE}
+b1_pop = {value=0.794, method=MLE}
+b2_pop = {value=0.0356, method=MLE}
+beta_b1_N803_1 = {value=0, method=MLE}
+beta_b1_RhmAbs_1 = {value=0, method=MLE}
+beta_b2_N803_1 = {value=0, method=MLE}
+omega_a = {value=0.72953, method=MLE}
+omega_b1 = {value=0.04174475, method=MLE}
+omega_x0 = {value=0.8284489, method=MLE}
+x0_pop = {value=6.725, method=MLE}
+
+<MONOLIX>
+
+[TASKS]
+populationParameters()
+individualParameters(method = {conditionalMean, conditionalMode })
+fim(method = StochasticApproximation)
+logLikelihood(method = ImportanceSampling)
+plotResult(method = {indfits, parameterdistribution, covariancemodeldiagnosis, covariatemodeldiagnosis, obspred, vpc, residualsscatter, residualsdistribution, randomeffects, saemresults, condmeanresults, likelihoodresults })
+
+[SETTINGS]
+GLOBAL:
+exportpath = '../'
+
+POPULATION:
+exploratoryinterval = 200
+smoothinginterval = 100
+
+INDIVIDUAL:
+nbsimulatedparameters = 1
+

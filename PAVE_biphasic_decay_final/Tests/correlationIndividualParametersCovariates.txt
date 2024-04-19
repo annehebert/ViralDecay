@@ -1,0 +1,3 @@
+parameter,covariate,statistics,p-value,test
+b1,beta_b1_N803_1,-24.8822,3.22192e-14,t-Test
+b1,beta_b1_RhmAbs_1,22.7152,1.3328e-13,t-Test
