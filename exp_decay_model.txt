@@ -1,0 +1,24 @@
+DESCRIPTION:
+Exponential decay model, two decay rates
+
+[LONGITUDINAL]
+;input={y0, A, b1, b2}
+input={x0, a, b1, b2}
+
+
+EQUATION:
+
+;a = log10(A)
+;x0 = log10(y0)
+x = x0 +log10((1-10^a) * exp(-b1*t*7) + 10^a * exp(-b2*t*7))
+
+; log10y = log10(y0) + log10[A*exp(-b1*t)+(1-A)*exp(-b2*t)]
+; log10y = log10(y0) + log10[log10(10^A)*exp(-b1*t)+ (1-log10(10^A))*exp(-b2*t)]
+
+;a = 10^A
+;logy0 = log10(y0)
+
+;logy=x
+
+OUTPUT:
+output = {x}
